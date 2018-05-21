@@ -12,7 +12,7 @@
     "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)"
   ],
   "dependencies": {
-    "@ladjs/api": "^0.1.9",
+    "@ladjs/api": "^0.2.0",
     "@ladjs/graceful": "^0.0.1",
     "@ladjs/logger": "^0.1.0",
     "@ladjs/proxy": "^0.0.1",

@@ -307,11 +307,11 @@
   dependencies:
     arrify "^1.0.1"
 
-"@ladjs/api@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@ladjs/api/-/api-0.1.9.tgz#1e145fc5c4639e83c744f1fee1554b05d04d8a20"
+"@ladjs/api@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@ladjs/api/-/api-0.2.0.tgz#4894c82377da5c4c1aa9cc8f93c9a4cd43802924"
   dependencies:
-    "@ladjs/i18n" "^0.3.1"
+    "@ladjs/i18n" "^0.3.2"
     "@ladjs/store-ip-address" "^0.0.5"
     boolean "^0.1.3"
     cabin "^1.0.0"
@@ -341,7 +341,7 @@
     debug "^3.0.1"
     stop-agenda "^0.0.5"
 
-"@ladjs/i18n@^0.3.1":
+"@ladjs/i18n@^0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@ladjs/i18n/-/i18n-0.3.2.tgz#b7c79253f60c7962953baf2fb11b6622d2341065"
   dependencies:

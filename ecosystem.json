@@ -22,7 +22,7 @@
   "deploy": {
     "production": {
       "user": "deploy",
-      "host": "lipo",
+      "host": "lipo-deploy",
       "ref": "origin/master",
       "repo": "git@github.com:lipojs/api.lipo.io.git",
       "path": "/var/www/production",
