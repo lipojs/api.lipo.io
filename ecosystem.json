@@ -6,7 +6,12 @@
       "exec_mode": "cluster",
       "instances": "max",
       "env_production": {
-        "NODE_ENV": "production"
+        "NODE_ENV": "production",
+        "API_PROTOCOL": "https",
+        "API_SSL_KEY_PATH": "/home/deploy/.ssl/key.key",
+        "API_SSL_CERT_PATH": "/home/deploy/.ssl/cert.crt",
+        "API_SSL_CA_PATH": "/home/deploy/.ssl/ca.crt",
+        "API_PORT": "3000"
       }
     },
     {
