@@ -1,0 +1,33 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "script": "api.js",
+      "exec_mode": "cluster",
+      "instances": "max",
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "proxy",
+      "script": "proxy.js",
+      "exec_mode": "cluster",
+      "instances": "max",
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "deploy",
+      "host": "lipo",
+      "ref": "origin/master",
+      "repo": "git@github.com:lipojs/api.lipo.io.git",
+      "path": "/var/www/production",
+      "post-deploy":
+        "yarn && pm2 startOrGracefulReload ecosystem.json --env production"
+    }
+  }
+}

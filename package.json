@@ -1,0 +1,135 @@
+{
+  "name": "api-lipo-io",
+  "private": true,
+  "description": "Lipo API service",
+  "version": "0.0.1",
+  "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
+  "bugs": {
+    "url": "https://github.com/lipojs/api.lipo.io/issues",
+    "email": "niftylettuce@gmail.com"
+  },
+  "contributors": [
+    "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)"
+  ],
+  "dependencies": {
+    "@ladjs/api": "^0.1.9",
+    "@ladjs/graceful": "^0.0.1",
+    "@ladjs/logger": "^0.1.0",
+    "@ladjs/proxy": "^0.0.1",
+    "bytes": "^3.0.0",
+    "koa-multer": "https://github.com/niftylettuce/multer",
+    "koa-router": "^7.4.0",
+    "lipo-koa": "^0.0.3",
+    "max-listeners-exceeded-warning": "^0.0.1",
+    "multer": "2.0.0-alpha.6"
+  },
+  "ava": {
+    "failFast": true,
+    "verbose": true
+  },
+  "devDependencies": {
+    "ava": "^1.0.0-beta.4",
+    "codecov": "^3.0.2",
+    "cross-env": "^5.1.5",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.2",
+    "nyc": "^11.8.0",
+    "prettier": "^1.12.1",
+    "remark-cli": "^5.0.0",
+    "remark-preset-github": "^0.0.8",
+    "xo": "^0.21.1"
+  },
+  "engines": {
+    "node": ">=8.3"
+  },
+  "homepage": "https://github.com/lipojs/api.lipo.io",
+  "keywords": [
+    "api",
+    "lipo",
+    "image",
+    "sharp",
+    "koa",
+    "server",
+    "image",
+    "resize",
+    "trim",
+    "crop",
+    "optimize",
+    "enhance",
+    "sharp",
+    "autocrop",
+    "jimp",
+    "im",
+    "imagemagick",
+    "imagemagic",
+    "graphicsmagick",
+    "graphics",
+    "gm",
+    "graphic",
+    "magic",
+    "magick",
+    "gulp",
+    "grunt"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx,css,less,scss,json,graphql}": [
+      "prettier --write --single-quote --trailing-comma none",
+      "git add"
+    ],
+    "*.md": ["remark . -qfo", "git add"]
+  },
+  "main": "index.js",
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100,
+    "reporter": ["lcov", "html", "text"]
+  },
+  "remarkConfig": {
+    "plugins": ["preset-github"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lipojs/api.lipo.io"
+  },
+  "scripts": {
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "lint": "xo && remark . -qfo",
+    "precommit": "lint-staged && npm test",
+    "test": "npm run lint && npm run test-coverage",
+    "test-coverage": "cross-env NODE_ENV=test nyc ava"
+  },
+  "xo": {
+    "extends": "prettier",
+    "plugins": ["prettier"],
+    "parserOptions": {
+      "sourceType": "script"
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "bracketSpacing": true,
+          "trailingComma": "none"
+        }
+      ],
+      "max-len": [
+        "error",
+        {
+          "code": 80,
+          "ignoreUrls": true
+        }
+      ],
+      "capitalized-comments": "off",
+      "camelcase": "off",
+      "no-warning-comments": "off"
+    },
+    "space": true
+  }
+}
