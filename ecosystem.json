@@ -11,7 +11,8 @@
         "API_SSL_KEY_PATH": "/home/deploy/.ssl/key.key",
         "API_SSL_CERT_PATH": "/home/deploy/.ssl/cert.crt",
         "API_SSL_CA_PATH": "/home/deploy/.ssl/ca.crt",
-        "API_PORT": "443"
+        "API_PORT": "443",
+        "API_TIMEOUT_MS": 10000
       }
     },
     {
