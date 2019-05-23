@@ -10,7 +10,7 @@ const bytes = require('bytes');
 
 if (process.env.NODE_ENV !== 'production') maxListenersExceededWarning();
 
-const logger = new Logger({ appName: 'lipo' });
+const logger = new Logger({appName: 'lipo'});
 const routes = new Router();
 const upload = multer({
   limits: {
@@ -31,7 +31,7 @@ const server = new Server({
 
 if (!module.parent) {
   server.listen(process.env.API_PORT || 3000);
-  const graceful = new Graceful({ server, logger });
+  const graceful = new Graceful({server, logger});
   graceful.listen();
 }
 

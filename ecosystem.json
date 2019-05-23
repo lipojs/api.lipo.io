@@ -8,10 +8,9 @@
       "env_production": {
         "NODE_ENV": "production",
         "API_PROTOCOL": "https",
-        "API_SSL_KEY_PATH": "/home/deploy/.ssl/key.key",
-        "API_SSL_CERT_PATH": "/home/deploy/.ssl/cert.crt",
-        "API_SSL_CA_PATH": "/home/deploy/.ssl/ca.crt",
-        "API_PORT": "443",
+        "API_SSL_KEY_PATH": "/home/deploy/certbot/config/live/api.lipo.io/privkey.pem",
+        "API_SSL_CERT_PATH": "/home/deploy/certbot/config/live/api.lipo.io/fullchain.pem",
+        "API_PORT": "8443",
         "API_TIMEOUT_MS": 30000
       }
     },
@@ -21,7 +20,8 @@
       "exec_mode": "cluster",
       "instances": "max",
       "env_production": {
-        "NODE_ENV": "production"
+        "NODE_ENV": "production",
+        "PROXY_PORT": "8080"
       }
     }
   ],
