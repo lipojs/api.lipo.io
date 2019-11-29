@@ -57,7 +57,7 @@
   "homepage": "https://github.com/lipojs/api.lipo.io",
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
+      "pre-commit": "lint-staged && npm test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -105,6 +105,11 @@
     ]
   },
   "main": "index.js",
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none"
+  },
   "private": true,
   "remarkConfig": {
     "plugins": [
