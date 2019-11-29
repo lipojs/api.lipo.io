@@ -1,7 +1,7 @@
 {
   "name": "api-lipo-io",
   "description": "Lipo API service",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
   "ava": {
     "failFast": true,
