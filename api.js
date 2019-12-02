@@ -27,8 +27,6 @@ const api = new API({
   logger
 });
 
-console.log('api.config', api.config);
-
 if (!module.parent) {
   const graceful = new Graceful({
     servers: [api],
