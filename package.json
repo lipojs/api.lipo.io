@@ -25,7 +25,6 @@
     "@ladjs/api": "0.2.27",
     "@ladjs/env": "^0.0.4",
     "@ladjs/graceful": "^1.0.0",
-    "@ladjs/logger": "^0.1.0",
     "@ladjs/proxy": "^1.0.0",
     "bytes": "^3.1.0",
     "cabin": "^5.0.9",
