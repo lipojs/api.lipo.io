@@ -1,6 +1,6 @@
 const path = require('path');
 
-const Axe = require('axe');
+const Cabin = require('cabin');
 const pino = require('pino');
 const { Signale } = require('signale');
 
@@ -12,19 +12,21 @@ const env = require('@ladjs/env')({
   schema: path.join(__dirname, '..', '.env.schema')
 });
 
-const logger = new Axe({
-  showStack: env.SHOW_STACK,
-  name: env.APP_NAME,
-  level: 'debug',
-  capture: false,
-  logger:
-    env === 'production'
-      ? pino({
-          customLevels: {
-            log: 30
-          }
-        })
-      : new Signale()
+const logger = new Cabin({
+  axe: {
+    showStack: env.SHOW_STACK,
+    name: env.APP_NAME,
+    level: 'debug',
+    capture: false,
+    logger:
+      env.NODE_ENV === 'production'
+        ? pino({
+            customLevels: {
+              log: 30
+            }
+          })
+        : new Signale()
+  }
 });
 
 module.exports = { env, logger };
