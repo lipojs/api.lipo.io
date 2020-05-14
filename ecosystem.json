@@ -33,7 +33,7 @@
       "repo": "git@github.com:lipojs/api.lipo.io.git",
       "path": "/var/www/production",
       "post-deploy":
-        "yarn && pm2 startOrGracefulReload ecosystem.json --env production"
+        "yarn install --production && pm2 startOrGracefulReload ecosystem.json --env production"
     }
   }
 }
