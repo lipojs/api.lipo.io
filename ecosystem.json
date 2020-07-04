@@ -8,8 +8,9 @@
       "env_production": {
         "NODE_ENV": "production",
         "API_PROTOCOL": "https",
-        "API_SSL_KEY_PATH": "/home/deploy/certbot/config/live/api.lipo.io/privkey.pem",
-        "API_SSL_CERT_PATH": "/home/deploy/certbot/config/live/api.lipo.io/fullchain.pem",
+        "API_SSL_KEY_PATH": "/var/www/production/.ssl-key",
+        "API_SSL_CERT_PATH": "/var/www/production/.ssl-cert",
+        "API_SSL_CA_PATH": "/var/www/production/.ssl-ca",
         "API_PORT": "8443",
         "API_TIMEOUT_MS": 30000
       }
@@ -28,7 +29,7 @@
   "deploy": {
     "production": {
       "user": "deploy",
-      "host": "lipo-deploy",
+      "host": "159.203.124.62",
       "ref": "origin/master",
       "repo": "git@github.com:lipojs/api.lipo.io.git",
       "path": "/var/www/production",
